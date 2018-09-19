@@ -131,10 +131,11 @@ def provenance(click_ctx, requirements, requirements_locked=None, whitelisted_so
 
         _LOGGER.exception("Error during checking provenance: %s", str(exc))
         result['error'] = True
-        result['report'] = {
+        result['report'] = [{
             'error_type': type(exc).__name__,
-            'error': str(exc)
-        }
+            'justification': str(exc),
+            'type': 'ERROR'
+        }]
     else:
         result['error'] = False
         result['report'] = report
@@ -206,10 +207,11 @@ def pypi(click_ctx, requirements, requirements_format=None, requirements_locked=
 
         _LOGGER.exception("Error during computing recommendation: %s", str(exc))
         result['error'] = True
-        result['report'] = {
+        result['report'] = [{
             'error_type': type(exc).__name__,
-            'error': str(exc)
-        }
+            'type': 'ERROR',
+            'justification': str(exc)
+        }]
     else:
         result['error'] = False
         if report:
