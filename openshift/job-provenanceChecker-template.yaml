@@ -49,6 +49,8 @@ objects:
                   value: "${THOTH_LOG_ADVISER}"
                 - name: THOTH_ADVISER_OUTPUT
                   value: "${THOTH_ADVISER_OUTPUT}"
+                - name: THOTH_WHITELISTED_SOURCES
+                  value: "${THOTH_WHITELISTED_SOURCES}"
                 - name: THOTH_ADVISER_REQUIREMENTS
                   value: "${THOTH_ADVISER_REQUIREMENTS}"
                 - name: THOTH_ADVISER_REQUIREMENTS_LOCKED
@@ -81,4 +83,9 @@ parameters:
     required: false
     description: Log adviser actions
     displayName: Log adviser actions
+    value: INFO
+  - name: THOTH_WHITELISTED_SOURCES
+    required: false
+    description: A comma separated list of whitelisted sources.
+    displayName: Whitelisted sources
     value: INFO
