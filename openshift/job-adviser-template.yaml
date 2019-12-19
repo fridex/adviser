@@ -157,6 +157,8 @@ objects:
                       name: thoth
                 - name: THOTH_DOCUMENT_ID
                   value: "${THOTH_DOCUMENT_ID}"
+                - name: THOTH_SENTRY_IGNORE_LOGGER
+                  value: "thoth.adviser.run"
                 - name: THOTH_ADVISER_FORK
                   value: "1"
                 - name: THOTH_LOG_ADVISER
