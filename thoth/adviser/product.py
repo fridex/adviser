@@ -130,7 +130,7 @@ class Product:
             runtime_environment=context.project.runtime_environment,
         )
 
-        justification_metadata = []
+        justification_metadata: List[Dict[str, Any]] = []
         metadata = os.getenv("THOTH_ADVISER_METADATA")
         if metadata:
             try:
